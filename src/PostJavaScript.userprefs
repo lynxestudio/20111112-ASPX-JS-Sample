@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PostJavaScript\Default.aspx.cs">
+    <Files>
+      <File FileName="PostJavaScript\Default.aspx" Line="20" Column="24" />
+      <File FileName="PostJavaScript\Default.aspx.designer.cs" Line="23" Column="1" />
+      <File FileName="PostJavaScript\Default.aspx.cs" Line="43" Column="40" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
