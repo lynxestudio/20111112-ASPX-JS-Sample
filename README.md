@@ -17,14 +17,9 @@ Los métodos más comunes usados de esta clase son:
 <li><b>RegisterClientScriptInclude:</b> sirve para ejecutar el código JavaScript que se guarda en un archivo externo (comúnmente con extensión .js) tiene dos cadenas como argumentos un nombre para identificar el script y el archivo que contiene el código JavaScript.
 </li>
 </ol>
-Como ejemplo mostraremos una página ASP.NET que utiliza dos listas de usuarios (ListBox) y dos botones (HTML input) que se utilizan para mover los usuarios de una lista hacia otra. Los eventos son controlados mediante código JavaScript, esto sin utilizar código JavaScript incrustado en la página HTML, sino que el código JavaScript se genera desde código ASP.NET. A continuación, el código Default.aspx:
+Como ejemplo mostraremos una página ASP.NET que utiliza dos listas de usuarios (ListBox) y dos botones (HTML input) que se utilizan para mover los usuarios de una lista hacia otra. Los eventos son controlados mediante código JavaScript, esto sin utilizar código JavaScript incrustado en la página HTML, sino que el código JavaScript se genera desde código ASP.NET.
 </p>
-<img src="201118index.png"/>
 <p align="justify">
-El código ASPX/HTML de este ejemplo no crea funcionalidad alguna por lo que explicaremos la funcionalidad contenida en el código C#, en el código Default.aspx.cs.
-</p>
-<img src="201118Code.png"/>
-<p>
 Primero creamos el código JavaScript que tendra la funcionalidad para agregar los elementos de una lista hacia la otra, esto se logra con la función FuncCopyItem(string name, string source, string destiny) esta función recibe tres argumentos el nombre de la función JavaScript que se creará en el código HTML al solicitar la página y con la cuál se identificaran los eventos de los controles , el control ListBox fuente de donde inicialmente se tomarán los items y por último el control ListBox destino a donde se pondrán los items. Con la siguiente línea de código:
 </p>
 <pre>
@@ -33,11 +28,9 @@ Primero creamos el código JavaScript que tendra la funcionalidad para agregar l
 <p>
 Obtenemos el objeto ClientScriptManager de la página, con él cual utilizaremos el metódo cs.RegisterStartupScript con sus parámetros correspondientes, algo importante por lo cuál usamos este metódo es por que para construir el código JavaScript utilizamos la propiedad ClientID del control ListBox, es decir el control debe existir obligatoriamente de lo contrario, cuando ASP .NET contruya la página contruirá el código JavaScript con estos parámetros nulos lo que causará un error no en la página ASP.NET sino en el código JavaScript cuando se llame para ejecutarse.
 </p>
-<div>Fig 1 La vista del proyecto en Monodevelop.</div>
-<img src="postJavaScript1.jpg"/>
-<div>Fig 2 Ejecutando la aplicación ASP.NET en Internet Explorer 9.0</div>
-<img src="postJavaScript2.jpg"/>
-<div>Fig 3 Ejecutando la aplicación ASP.NET en Firefox.</div>
-<img src="postJavaScript3.jpg"/>
-<div>Fig 4 Mostrado el código JavaScript en la página generada por ASP.NET.</div>
-<img src="postJavaScript4.jpg"/>
+<div>Fig 1 Ejecutando la aplicación ASP.NET en Internet Explorer 9.0</div>
+<img src="images/postJavaScript2.jpg"/>
+<div>Fig 2 Ejecutando la aplicación ASP.NET en Firefox.</div>
+<img src="images/postJavaScript3.jpg"/>
+<div>Fig 3 Mostrado el código JavaScript en la página generada por ASP.NET.</div>
+<img src="images/postJavaScript4.jpg"/>
